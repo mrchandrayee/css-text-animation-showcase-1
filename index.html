@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
+  <title>CSS Text Animation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="heading"><h1>CSS TEXT ANIMATION</h1></header>
+
+  <main class="gallery">
+    <section class="demo">
+      <div class="preview typing-preview">
+        <div class="typing">Typing Animation</div>
+      </div>
+      <div class="code-panel">
+        <div class="code-title">CSS Code <button class="copy" data-code="typing">Copy CSS</button></div>
+        <pre><code>.typing {
+  overflow: hidden;
+  border-right: 4px solid white;
+
+  animation:
+    typing 4s steps(20,end),
+    blink .7s infinite;
+}</code></pre>
+      </div>
+    </section>
+
+    <section class="demo">
+      <div class="preview gradient-preview">
+        <h2 class="gradient">GRADIENT</h2>
+      </div>
+      <div class="code-panel">
+        <div class="code-title">CSS Code <button class="copy" data-code="gradient">Copy CSS</button></div>
+        <pre><code>.gradient {
+  background: linear-gradient(
+    90deg,
+    #ff0080,
+    #00ffff
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradientMove 5s infinite;
+}</code></pre>
+      </div>
+    </section>
+
+    <section class="demo">
+      <div class="preview float-preview">
+        <h2 class="float">FLOAT</h2>
+      </div>
+      <div class="code-panel">
+        <div class="code-title">CSS Code <button class="copy" data-code="float">Copy CSS</button></div>
+        <pre><code>.float {
+  animation:
+    floatText 3s ease-in-out infinite;
+}</code></pre>
+      </div>
+    </section>
+
+    <section class="demo">
+      <div class="preview wave-preview">
+        <h2 class="wave" aria-label="WAVE!">
+          <span>W</span><span>A</span><span>V</span><span>E</span><span>!</span>
+        </h2>
+      </div>
+      <div class="code-panel">
+        <div class="code-title">CSS Code <button class="copy" data-code="wave">Copy CSS</button></div>
+        <pre><code>.wave span {
+  display: inline-block;
+
+  animation:
+    wave 1s infinite;
+}
+
+.wave span:nth-child(2) {
+  animation-delay: .1s;
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer>Pure CSS text effects · Hover any preview to replay</footer>
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
